@@ -104,11 +104,6 @@ class AlienInvasion:
         self._check_fleet_edges()
         self.aliens.update()
 
-        # Get rid of bullets that have disappeared.
-        for bullet in self.bullets.copy():
-            if bullet.rect.bottom <= 0:
-                self.bullets.remove(bullet)
-
     def _create_fleet(self):
         """Create the fleet of aliens."""
         # Create an alien and keep adding aliens until there is no room left.
